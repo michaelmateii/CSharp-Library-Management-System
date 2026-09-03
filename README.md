@@ -36,10 +36,10 @@ The application is mainly divided into three classes:
 
 The application currently stores its data in memory, meaning books and customers are reset when the application closes. A future improvement would be adding persistent storage with a database.
 
-## Screenshots
+## Screenshot
 
-![Library Management System](../LibraryApp/docs/LibraryApp.png)
+![Library Management System](screenshot/LibraryApp.png)
 
 ## UML Diagram
 
-![UML Diagram](<../LibraryApp/docs/UMLdiagram.png>)
+![UML Diagram](docs/UMLdiagram.png)
