@@ -38,7 +38,7 @@ The application currently stores its data in memory, meaning books and customers
 
 ## Screenshot
 
-![Library Management System](screenshot/LibraryApp.png)
+![Library Management System](docs/LibraryApp.png)
 
 ## UML Diagram
 
