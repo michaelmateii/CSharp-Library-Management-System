@@ -1,0 +1,71 @@
+<Window
+    x:Class="LibraryApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:LibraryApp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Library System"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <Grid Padding="20">
+            <StackPanel Spacing="20">
+
+                <TextBlock Text="📚 Library System" FontSize="28" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <!--Section: Search-->
+                <StackPanel>
+                    <TextBlock Text="🔍 Search Books" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBox x:Name="SearchBox" PlaceholderText="Enter title or author" Width="300"/>
+                        <Button Content="Search" Click="SearchButton_Click" Width="100"/>
+                        <Button Content="Show All" Click="ShowAllButton_Click" Width="100"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!--Book Registration-->
+                <StackPanel>
+                    <TextBlock Text="➕ Add New Book" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBox x:Name="TitleBox" PlaceholderText="Title" Width="200"/>
+                        <TextBox x:Name="AuthorBox" PlaceholderText="Author" Width="200"/>
+                        <TextBox x:Name="ISBNBox" PlaceholderText="ISBN" Width="150"/>
+                        <Button Content="Add Book" Click="AddBook_Click" Width="100"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!--Customer Registration-->
+                <StackPanel>
+                    <TextBlock Text="🧑 Register Customer" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBox x:Name="CustomerNameBox" PlaceholderText="Name" Width="200"/>
+                        <TextBox x:Name="CustomerIdBox" PlaceholderText="Customer ID" Width="150"/>
+                        <Button Content="Register" Click="RegisterCustomer_Click" Width="100"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!--Loan/ Return/ Reserve-->
+                <StackPanel>
+                    <TextBlock Text="📦 Loan / Return / Reserve" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <ComboBox x:Name="CustomerSelectBox" Width="200" PlaceholderText="Select customer"/>
+                        <ComboBox x:Name="BookSelectBox" Width="300" PlaceholderText="Select book"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="10" Margin="0,5,0,0">
+                        <Button Content="Loan Book" Click="LoanBook_Click" Width="100"/>
+                        <Button Content="Return Book" Click="ReturnBook_Click" Width="100"/>
+                        <Button Content="Reserve Book" Click="ReserveBook_Click" Width="130"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Book List -->
+                <StackPanel>
+                    <TextBlock Text="📖 All Books" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <ListBox x:Name="BookList" Height="250"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
