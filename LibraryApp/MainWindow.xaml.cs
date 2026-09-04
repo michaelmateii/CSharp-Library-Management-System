@@ -13,8 +13,6 @@ namespace LibraryApp
             this.InitializeComponent();
             library = new LibraryLogic();
 
-            library = new LibraryLogic();
-
             // Add some initial customers
             library.RegisterCustomer("Alice Andersson", "C001");
             library.RegisterCustomer("Bob Berg", "C002");

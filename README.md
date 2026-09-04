@@ -36,6 +36,12 @@ The application is mainly divided into three classes:
 
 The application currently stores its data in memory, meaning books and customers are reset when the application closes. A future improvement would be adding persistent storage with a database.
 
+## Project Report
+
+A more detailed description of the project and implementation is available here:
+
+[View the project report (PDF)](docs/Project-report.pdf)
+
 ## Screenshot
 
 ![Library Management System](docs/LibraryApp.png)

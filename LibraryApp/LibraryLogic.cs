@@ -88,13 +88,17 @@ public class LibraryLogic
     public bool ReserveBook(string isbn, string customerId)
     {
         var book = books.FirstOrDefault(b => b.ISBN == isbn && !b.IsAvailable);
+        var customer = customers.FirstOrDefault(c => c.CustomerID == customerId);
+
         if (book != null &&
+            customer != null &&
             !book.ReservationQueue.Contains(customerId) &&
             book.ReservationQueue.Count < 2)
         {
             book.ReservationQueue.Add(customerId);
             return true;
         }
+
         return false;
     }
 
